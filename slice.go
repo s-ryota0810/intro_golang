@@ -3,14 +3,14 @@ package main
 import "fmt"
 
 func main() {
-	b := []int{1, 2, 3, 23, 43}
-	s := b[1:4] // [3]
-
+	// s := make([]int, 3) // [0 0 0]
+	s := []int{1, 3, 5}
+	// append
+	s = append(s, 5, 3, 565)
+	//copy
+	t := make([]int, len(s))
+	n := copy(t, s)
 	fmt.Println(s)
-	fmt.Println(len(b), cap(b))
-	fmt.Println(len(s), cap(s))
-	fmt.Println(s)
-	s[1] = 33
-	fmt.Println(s)
-	fmt.Println(len(s), cap(s))
+	fmt.Println(t)
+	fmt.Println(n)
 }
